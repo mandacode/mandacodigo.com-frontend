@@ -1,31 +1,27 @@
-import React from "react";
-import { Container, Typography, CssBaseline, AppBar, Toolbar } from "@mui/material"
-import AppRoutes from "./routes"
+import React from 'react';
 
-const App = () => {
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Navbar } from './components';
+import { AboutMe, Contact, Landing } from './pages';
+import styles from './style';
 
-    return (
-        <>
-            <CssBaseline />
-            <AppBar position="relative">
-                <Toolbar>
-                    <img
-                        // src="https://manda-uploads.s3.eu-north-1.amazonaws.com/static/manda-white-logo.png"
-                        src="favicon.ico" 
-                        alt="Logo"
-                        style={{ marginRight: '8px', height: '24px' }} 
-                    />
-                    <Typography variant="h6">manda_codigo</Typography>
-                </Toolbar>
-            </AppBar>
-            <Container maxWidth="sm" style={{ marginTop: "50px" }}>
-                <Typography variant="h4" align="center">
-                    Welcome to manda_codigo!
-                </Typography>
-                <AppRoutes />
-            </Container>
-        </>
-    );
-}
+const App = () => (
+  <div className='bg-primary w-full overflow-hidden '>
 
-export default App;
+    <Router>
+      < div className={`${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Navbar />
+        </div>
+      </div>
+      <Routes>
+        <Route path='/' element={<Landing />}></Route>
+        <Route path='/contact' element={<Contact />}></Route>
+        <Route path='/aboutme' element={<AboutMe />}></Route>
+      </Routes>
+    </Router>
+  </div>
+)
+
+
+export default App
