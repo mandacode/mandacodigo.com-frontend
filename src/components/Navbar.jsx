@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
-import { close, logo, menu } from '../assets';
+import { close, logo, menu, mandamenu, instagram, youtube} from '../assets';
 import { navLinks } from '../constants';
 
 
@@ -35,15 +35,13 @@ const Navbar = () => {
                 />
                 <div className={`${toggle ? 'flex' : 'hidden'} fixed inset-0 bg-white z-30 flex-col text-xl transition-opacity duration-500 z-20`}>
                     <h3 className='mt-9 pl-5 text-center font-goldman tracking-veryWidest'>MENU</h3>
-
-                    <ul className='ml-8 list-none mt-20'>
+                    <ul className='ml-8 list-none mt-20 z-30'>
                         {
                             navLinks.map((nav, idx) => (
-                                <li key={nav.id} className={`font-goldman font-normal cursor-pointer text-[36px] p-5 ${idx == navLinks.length - 1 ? 'mr-0' : 'mr-10'}  text-black`}>
-                                    {console.log(location.pathname, nav.id)}
+                                <li key={nav.id} className={`font-goldman font-normal cursor-pointer text-[36px] p-3 text-black`}>
                                     <Link
                                         to={nav.id}
-                                        className={`px-3 py-2 text-lg font-medium  ${location.pathname === nav.id
+                                        className={`py-2 text-3xl font-medium  ${location.pathname === nav.id
                                             ? "text-mandaMint"
                                             : "text-black"
                                         }`
@@ -55,6 +53,13 @@ const Navbar = () => {
                             ))
                         }
                     </ul>
+                        
+                    <img src={mandamenu} className='absolute bottom-0 right-0 w-56' />
+                    
+                    <div className='flex absolute bottom-10 left-10 space-x-2'>
+                        <img src={instagram} alt='instagram'/>
+                        <img src={youtube} alt='youtube'/>
+                    </div>
 
                 </div>
             </div>
