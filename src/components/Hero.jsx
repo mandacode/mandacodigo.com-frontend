@@ -1,5 +1,4 @@
 import React from 'react';
-import { shadow } from '../assets';
 import Button from './Button';
 
 
@@ -20,11 +19,10 @@ const Hero = () => {
         </p>
 
         <div className='py-20 w-full sm:w-80 justify-center'>
-          <Button text='Rozpocznij mentoring' to='/contact'/>
+          <Button text='Rozpocznij mentoring' to='contact' />
         </div>
 
       </div>
-      <img src={shadow} className='w-full'/>
     </div>
 
   )
