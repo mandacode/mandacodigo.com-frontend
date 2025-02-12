@@ -6,14 +6,10 @@ import { AboutMe, Contact, Landing } from './pages';
 import styles from './style';
 
 const App = () => (
-  <div className='bg-primary w-full overflow-hidden '>
+  <div className='bg-primary w-full overflow-hidden'>
 
     <Router>
-      < div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Navbar />
-        </div>
-      </div>
+      <Navbar />
       <Routes>
         <Route path='/' element={<Landing />}></Route>
         <Route path='/contact' element={<Contact />}></Route>

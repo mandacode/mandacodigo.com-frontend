@@ -2,11 +2,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Goldman:wght@400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Zen+Dots:wght@400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Avenir:wght@400;500;600;700;800;900&display=swap");
 
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Konexy';
+  src: url('/fonts/Konexy Font.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   --black-gradient: linear-gradient(144.39deg,

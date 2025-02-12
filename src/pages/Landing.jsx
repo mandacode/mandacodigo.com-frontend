@@ -1,22 +1,28 @@
 import React from 'react';
-import { CTA, Footer, Hero, Navbar } from '../components';
-import styles from '../style';
+import { Hero } from '../components';
 
 
 const Landing = () => {
     return (
         <div>
-            <div className={`bg-primary ${styles.flexStart}`}>
-                <div className={`${styles.boxWidth}`}>
-                    <Hero />
-                </div>
+            <div className="h-screen bg-backgroundHero bg-no-repeat bg-center bg-scroll">
+                <Hero />
+              
             </div>
-            <div className={`bg-primary ${styles.flexStart} ${styles.paddingX}`}>
+            <div>
+                Why manda
+            </div>
+
+
+
+            {/* <div className={`bg-primary ${styles.flexStart} `}>
+               
+            </div>
+            <div className={`bg-primary ${styles.flexStart} `}>
                 <div className={`${styles.boxWidth}`}>
-                    <CTA />
                     <Footer />
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

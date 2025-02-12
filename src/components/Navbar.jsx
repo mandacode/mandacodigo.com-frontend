@@ -9,7 +9,7 @@ const Navbar = () => {
     const location = useLocation()
 
     return (
-        <div className='w-full flex py-6 justify-between items-center navbar'>
+        <div className='flex justify-between navbar py-6 px-8'>
             <Link to='/'><img src={logo} alt='mandacodigo' className='w-[48px] h-[48px] cursor-pointer' /></Link>
             <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
                 {
@@ -26,7 +26,7 @@ const Navbar = () => {
                     ))
                 }
             </ul>
-            <div className='sm:hidden flex flex-1 justify-end items-center'>
+            <div className='sm:hidden flex flex-1 justify-end'>
                 <img
                     src={toggle ? close : menu}
                     alt='menu'
@@ -56,10 +56,6 @@ const Navbar = () => {
                         
                     <img src={mandamenu} className='absolute bottom-0 right-0 w-56' />
                     
-                    <div className='flex absolute bottom-10 left-10 space-x-2'>
-                        <img src={instagram} alt='instagram'/>
-                        <img src={youtube} alt='youtube'/>
-                    </div>
 
                 </div>
             </div>
